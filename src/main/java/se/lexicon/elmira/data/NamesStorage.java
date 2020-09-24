@@ -22,6 +22,12 @@ public class NamesStorage { //class starts
         return exists;
     }// method ends
 
+    /**
+     *
+     * @param fullName String representing a full name, <b>Not null</b>
+     * @return true if name was added, false if param was was null or existed in the array
+     */
+
     public static boolean add(final String fullName){
      if(fullName == null){
          return false;

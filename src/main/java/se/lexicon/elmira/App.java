@@ -13,5 +13,8 @@ public class App
 
         String[] eriks = NamesStorage.findByFirstName("marTiN");
         System.out.println(Arrays.toString(eriks));
+
+        String[] eriks1 = NamesStorage.findByLastName("svensson");
+        System.out.println(Arrays.toString(eriks1));
     }
 }

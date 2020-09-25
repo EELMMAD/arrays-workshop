@@ -2,21 +2,16 @@ package se.lexicon.elmira;
 
 import se.lexicon.elmira.data.NamesStorage;
 
+import java.util.Arrays;
+
 public class App
 {
-    public static void main( String[] args )
-    {
-       boolean added = NamesStorage.add("Erik Svensson");
-        if(added){
-            System.out.println("A name was added");
-        }
+    public static void main( String[] args ) {
+        NamesStorage.add("Erik Svensson");
+        NamesStorage.add("Erik Andersson");
+        NamesStorage.add("Martin Svensson");
 
-        added = NamesStorage.add("Erik Svensson");
-        if(added){
-            System.out.println("A name was added");
-        }else {
-            System.out.println("Name already exists");
-        }
-        System.out.println(NamesStorage.add(null));
+        String[] eriks = NamesStorage.findByFirstName("marTiN");
+        System.out.println(Arrays.toString(eriks));
     }
 }
